@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<?php wp_print_styles( array( 'wprig-sidebar', 'wprig-widgets' ) ); ?>
+<?php // wp_print_styles( array( 'wprig-sidebar', 'wprig-widgets' ) ); ?>
 <aside id="secondary" class="primary-sidebar widget-area">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

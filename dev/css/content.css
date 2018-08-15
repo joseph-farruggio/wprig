@@ -214,12 +214,24 @@
 }
 
 .alignwide {
-	max-width: calc(50% + var(--content-width)rem / 2);
+	/* max-width: calc(50% + var(--content-width)rem / 2); */
 }
 
 .alignfull {
-	max-width: 100%;
+	width: 100%;
 	padding: 0;
+}
+
+@media (--large-query) {
+	.alignfull {
+		width: var(--large-container);
+		margin-left: -3rem;
+		padding: 0;
+	}
+	
+	.alignfull img {
+		width: var(--large-container);
+	}
 }
 
 .wp-block-image img {

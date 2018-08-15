@@ -1,0 +1,118 @@
+$purple-light: #b665d2;
+$purple-dark: #5937b9;
+$pink: #f450a8;
+$orange-light: #fec29d;
+$teal-light: #79eafb;
+$teal-dark: #45bccc;
+$bottom-spacing: 4rem;
+$outer-padding: 0 30px;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 80px 1em;
+  width: 100%;
+
+  background: url('../images/svg/colored-shapes-bg2.svg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100;
+    z-index: -1;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #21D4FD 75%);
+  }
+
+  &.--large {
+    height: 110vh;
+    padding: 0 1em;
+  }
+
+  h1, h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 20px;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    color: #ffffff;
+    width: 700px;
+    max-width: 100%;
+    margin-bottom: 45px;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &.has-columns {
+    .content {
+      text-align: center;
+    }
+
+    .image {
+      display: none;
+    }
+  }
+
+  @media (--large-query) {
+    // padding: 150px 1em
+    h1, h2 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    &.has-columns {
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        width: 50%;
+      }
+
+      h1 {
+        font-family: "Montesarrat", sans-serif;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0;
+      }
+
+      .image {
+        display: block;
+        width: 50%;
+      }
+
+      img {
+        height: 450px;
+        width: auto;
+        max-width: unset;
+      }
+    }
+  }
+}

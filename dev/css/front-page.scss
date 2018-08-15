@@ -1,0 +1,126 @@
+/**
+ * Custom styles for the front-page.php template.
+ */
+
+ .home {
+	
+	h2 {
+		color: #333;
+	}
+
+	ul.services {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 4px;
+			background: #333;
+
+			&.cta {
+				background: #f8663a;
+				color: #fff;
+
+				.btn {
+					font-size: 1rem;
+				}
+			}
+		}
+		h3 {
+			font-size: 1.25rem;	
+		}
+		h3, a {
+			margin-top: 0;
+			text-decoration: none;
+			color: #fff;
+			// margin-bottom: 20px;
+		}
+
+		p {
+			line-height: 1.2;
+		}
+
+		img {
+			display: none;
+		}
+
+		.learn-more {
+			display: inline-block;
+		}
+	}
+
+	@media (--medium-query) {
+
+		ul.services {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			li {
+				width: calc(50% - 20px);
+				padding-bottom: 100px;
+				margin: 0 5px 30px;
+				align-items: flex-start;
+				position: relative;
+				overflow: hidden;
+				transform: translateY(0%);
+				transition: webkit-transform 0.4s, box-shadow 0.4s, transform 0.4s cubic-bezier(0.33, 0.005, 0.125, 1.005);
+				box-shadow: none;
+
+				&:hover {
+					transform: translateY(-5%);
+					box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+				}
+
+				&.cta {
+					flex-grow: 1;
+					text-align: center;
+					padding-bottom: 0;
+
+					& > div {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						cursor: pointer;
+					}	
+
+					.btn {
+						display: inline-block;
+					}
+				}
+
+				a, & > div {
+					padding: 25px 25px 65px;
+					display: block;
+					height: 100%;
+				}
+
+				img {
+					display: block;
+					position: absolute;
+					height: 140px;
+					right: 0;
+					bottom: 0;
+					transition: .5s;
+				}
+
+				.learn-more {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media (--large-query) {
+		ul.services li {
+			width: calc(33.33% - 30px);
+
+			&.cta {
+				flex-grow: 0;
+			}
+		}
+	}
+}

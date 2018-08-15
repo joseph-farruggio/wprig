@@ -1,0 +1,39 @@
+[v-cloak] {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+// Margin
+$i: -5;
+
+@while $i < 100 {
+  // do stuff
+  $i: $i + 5;
+  $value: $i * 1px;
+
+  .mb {
+    &-#{$i} {
+      margin-bottom: $value;
+    }
+  }
+
+  .mt {
+    &-#{$i} {
+      margin-top: $value;
+    }
+  }
+}
+
+@media (--medium-query) {
+  .hide-on-mobile {
+    display: initial;
+  }
+}
+    

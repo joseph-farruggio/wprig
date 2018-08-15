@@ -1,14 +1,22 @@
 {
 	"variables": {
 		"global-font-color": "#333",
-		"global-font-family": "'Crimson Text', serif",
+		"primary-color": "#661298",
+		"link-color": "#661298",
+		"global-font-family": "'Montserrat Condensed', sans-serif",
     	"global-font-size": "20",
     	"global-font-line-height": "1.4",
-    	"highlight-font-family": "'Roboto Condensed', sans-serif",
+    	"highlight-font-family": "'Comfortaa', serif",
     	"content-width": "45",
-		"dropdown-symbol-width": "0.7em"
+		"dropdown-symbol-width": "0.7em",
+		"large-container": "920px"
 	},
 	"queries": {
+			"small-query": "screen and (min-width: 576px)",
+			"medium-query": "screen and (min-width: 768px)",
+			"large-query": "screen and (min-width: 992px)",
+			"up-to-large-query": "screen and (max-width: 991px)",
+			"extra-large-query": "screen and (min-width: 1200px)",
     	"narrow-menu-query": "screen and (max-width: 37.5em)",
     	"wide-menu-query": "screen and (min-width: 37.5em)",
     	"content-query": "screen and (min-width: 48em)",

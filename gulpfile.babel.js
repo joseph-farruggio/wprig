@@ -49,7 +49,7 @@ const paths = {
 	styles: {
 		src: ['dev/**/*.css', '!dev/optional/**/*.*'],
 		dest: './',
-		sass: ['dev/**/*.scss']
+		sass: ['dev/**/*.scss', 'dev/**/*.sass']
 	},
 	scripts: {
 		src: ['dev/**/*.js', '!dev/**/*.min.js', '!dev/js/libs/**/*.js', '!dev/optional/**/*.*', '!dev/config/**/*'],

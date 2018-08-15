@@ -774,7 +774,8 @@ textarea {
 .main-navigation {
 	clear: both;
 	display: block;
-	margin: 0 auto 2em;
+	/* margin: 0 auto 2em; */
+	margin: 0;
 	padding: 0 1em;
 	max-width: calc(var(--content-width) * 16)px; /* Fallback for older browsers. */
 	max-width: var(--content-width)rem;
@@ -830,13 +831,13 @@ textarea {
 	display: none;
 }
 
-@media (--narrow-menu-query) {
+@media (--up-to-large-query) {
 	.main-navigation.toggled-on .menu {
-		display: block;
+		/* display: block; */
 	}
 }
 
-@media (--wide-menu-query) {
+@media (--large-query) {
 	.menu-toggle {
 		display: none;
 	}

@@ -1,0 +1,84 @@
+h1, h2 {
+	font-size: 1.5rem;
+	line-height: 1rem;
+	margin: 1rem 0 2rem;
+	font-weight: 600; }
+
+section.contact {
+	padding: 100px 15px 15px;
+	font-size: 0;
+	margin-top: -107px; }
+	section.contact .panel {
+		position: relative;
+		z-index: 2;
+		background: #fff;
+		padding: 30px;
+		font-size: initial; }
+		section.contact .panel.left-side {
+			margin-top: 20px; }
+			section.contact .panel.left-side h1, section.contact .panel.left-side h2 {
+				color: #5937b9; }
+		section.contact .panel.right-side {
+			background: #5937b9;
+			color: #fff; }
+			section.contact .panel.right-side h2 {
+				color: #fff; }
+			section.contact .panel.right-side ul.contact {
+				margin: 0;
+				padding: 0; }
+				section.contact .panel.right-side ul.contact li {
+					list-style-type: none;
+					position: relative;
+					padding-left: 30px;
+					margin-bottom: 25px; }
+					section.contact .panel.right-side ul.contact li a {
+						color: #fff; }
+					section.contact .panel.right-side ul.contact li i {
+						position: absolute;
+						top: 5px;
+						left: 0;
+						color: #fff; }
+			section.contact .panel.right-side ul.social {
+				margin: 0;
+				padding: 0; }
+				section.contact .panel.right-side ul.social li {
+					display: inline-block;
+					text-align: center;
+					border-radius: 50%;
+					transition: 0.5s;
+					margin-right: 15px; }
+					section.contact .panel.right-side ul.social li a {
+						display: inline-block;
+						height: 30px;
+						width: 30px;
+						line-height: 30px;
+						color: #fff;
+						border-radius: 50%; }
+						section.contact .panel.right-side ul.social li a:hover {
+							background-color: rgba(0, 0, 0, 0.2); }
+	@media (--medium-query) {
+		section.contact {
+			padding: 160px 0 100px;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			overflow: hidden; }
+			section.contact .container {
+				display: flex; }
+			section.contact .panel {
+				display: inline-block;
+				flex: unset; }
+				section.contact .panel.left-side {
+					width: 60%;
+					margin: 0; }
+				section.contact .panel.right-side {
+					width: 40%;
+					vertical-align: top; } }
+	@media (--large-query) {
+		section.contact .panel.left-side {
+			width: 65%;
+			margin: 0; }
+		section.contact .panel.right-side {
+			width: 35%; } }
+
+/*# sourceMappingURL=../../maps/dev/css/contact-page.css.map */

@@ -5,113 +5,174 @@
 .editor-writing-flow {
 	color: var(--global-font-color);
 	font-family: var(--global-font-family);
-	font-size: var(--global-font-size)px;
-	font-size: calc(var(--global-font-size) / 16)rem;
+	font-size: var(--global-font-size) px;
+	font-size: calc(var(--global-font-size) / 16) rem;
 	line-height: var(--global-font-line-height);
-}
+	/*! Typebase.less v0.1.0 | MIT License */
+	/* Setup */
+	/* Copy & Lists */
+	/* Headings */
+	/* Tables */
+	/* Code blocks */
+	/* Leading paragraph text */
+	/* Hug the block above you */ }
+	.editor-writing-flow html {
+		/* Change default typefaces here */
+		font-family: 'Montesarrat', sans-serif;
+		font-size: 137.5%;
+		-webkit-font-smoothing: antialiased; }
+	.editor-writing-flow p {
+		line-height: 1.5rem;
+		margin-top: 1.5rem;
+		margin-bottom: 20px; }
+	.editor-writing-flow ul,
+	.editor-writing-flow ol {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem; }
+	.editor-writing-flow ul li,
+	.editor-writing-flow ol li {
+		line-height: 1.5rem; }
+	.editor-writing-flow ul ul,
+	.editor-writing-flow ol ul,
+	.editor-writing-flow ul ol,
+	.editor-writing-flow ol ol {
+		margin-top: 0;
+		margin-bottom: 0; }
+	.editor-writing-flow blockquote {
+		line-height: 1.5rem;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem; }
+	.editor-writing-flow h1,
+	.editor-writing-flow h2,
+	.editor-writing-flow h3,
+	.editor-writing-flow h4,
+	.editor-writing-flow h5,
+	.editor-writing-flow h6 {
+		/* Change heading typefaces here */
+		font-family: 'Comfortaa', serif;
+		margin-top: 1.5rem;
+		margin-bottom: 0;
+		line-height: 1.5rem;
+		color: #470d6a; }
+	.editor-writing-flow h1 {
+		font-size: 4.242rem;
+		line-height: 4.5rem;
+		margin-top: 3rem;
+		color: initial; }
+	.editor-writing-flow h2 {
+		font-size: 1.5rem;
+		line-height: 1.75rem;
+		margin-top: 3rem;
+		font-weight: 600; }
+	.editor-writing-flow h3 {
+		font-size: 1.414rem; }
+	.editor-writing-flow h4 {
+		font-size: 0.707rem; }
+	.editor-writing-flow h5 {
+		font-size: 0.4713333333333333rem; }
+	.editor-writing-flow h6 {
+		font-size: 0.3535rem; }
+	.editor-writing-flow table {
+		margin-top: 1.5rem;
+		border-spacing: 0px;
+		border-collapse: collapse; }
+	.editor-writing-flow table td,
+	.editor-writing-flow table th {
+		padding: 0;
+		line-height: 33px; }
+	.editor-writing-flow code {
+		vertical-align: bottom; }
+	.editor-writing-flow .lead {
+		font-size: 1.414rem; }
+	.editor-writing-flow .hug {
+		margin-top: 0; }
+	.editor-writing-flow .heading {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+		margin-bottom: 45px; }
 
 .editor-post-title .editor-post-title__input,
-.editor-writing-flow h1,
-.editor-writing-flow h2,
-.editor-writing-flow h3,
-.editor-writing-flow h4,
-.editor-writing-flow h5,
-.editor-writing-flow h6,
-.edit-post-visual-editor p {
-	font-family: var(--highlight-font-family);
+.editor-post-title .editor-writing-flow h1,
+.editor-post-title .editor-writing-flow h2,
+.editor-post-title .editor-writing-flow h3,
+.editor-post-title .editor-writing-flow h4,
+.editor-post-title .editor-writing-flow h5,
+.editor-post-title .editor-writing-flow h6,
+.editor-post-title .edit-post-visual-editor p {
+	font-family: var(--global-font-family);
 	color: #32373c;
-	clear: both;
-}
+	clear: both; }
 
 .editor-post-title .editor-post-title__input {
 	font-size: 32px;
 	font-size: 2rem;
-	line-height: 1.4;
-}
+	line-height: 1.4; }
 
 .edit-post-visual-editor p {
-	font-family: var(--global-font-family);
-}
+	font-family: var(--global-font-family); }
 
 /* Visualize editor color palette (defined in functions.php). */
-
 .has-dusty-orange-color,
 .has-dusty-orange-color a {
-	color: #ED8F5B;
-}
+	color: #ED8F5B; }
 
 .has-dusty-orange-background-color {
-	background-color: #ED8F5B;
-}
+	background-color: #ED8F5B; }
 
 .has-dusty-red-color,
 .has-dusty-red-color a {
-	color: #E36D60;
-}
+	color: #E36D60; }
 
 .has-dusty-red-background-color {
-	background-color: #E36D60;
-}
+	background-color: #E36D60; }
 
 .has-dusty-wine-color,
 .has-dusty-wine-color a {
-	color: #9C4368;
-}
+	color: #9C4368; }
 
 .has-dusty-wine-background-color {
-	background-color: #9C4368;
-}
+	background-color: #9C4368; }
 
 .has-dark-sunset-color,
 .has-dark-sunset-color a {
-	color: #33223B;
-}
+	color: #33223B; }
 
 .has-dark-sunset-background-color {
-	background-color: #33223B;
-}
+	background-color: #33223B; }
 
 .has-almost-black-color,
 .has-almost-black-color a {
-	color: #0A1C28;
-}
+	color: #0A1C28; }
 
 .has-almost-black-background-color {
-	background-color: #0A1C28;
-}
+	background-color: #0A1C28; }
 
 .has-dusty-water-color,
 .has-dusty-water-color a {
-	color: #41848F;
-}
+	color: #41848F; }
 
 .has-dusty-water-background-color {
-	background-color: #41848F;
-}
+	background-color: #41848F; }
 
 .has-dusty-sky-color,
 .has-dusty-sky-color a {
-	color: #72A7A3;
-}
+	color: #72A7A3; }
 
 .has-dusty-sky-background-color {
-	background-color: #72A7A3;
-}
+	background-color: #72A7A3; }
 
 .has-dusty-daylight-color,
 .has-dusty-daylight-color a {
-	color: #97C0B7;
-}
+	color: #97C0B7; }
 
 .has-dusty-daylight-background-color {
-	background-color: #97C0B7;
-}
+	background-color: #97C0B7; }
 
 .has-dusty-sun-color,
 .has-dusty-sun-color a {
-	color: #EEE9D1;
-}
+	color: #EEE9D1; }
 
 .has-dusty-sun-background-color {
-	background-color: #EEE9D1;
-}
+	background-color: #EEE9D1; }
+
+/*# sourceMappingURL=../../maps/dev/css/editor-styles.css.map */

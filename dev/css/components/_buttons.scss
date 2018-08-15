@@ -1,0 +1,91 @@
+.btn {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: 0.5s;
+  white-space: nowrap;
+
+  &.btn-large {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;  
+  }
+
+  // Button Type
+  &.btn-round {
+    border-radius: 30px;
+
+    &:hover {
+      box-shadow: none;
+      background: #fff;
+      color: #222;
+    }
+  }
+
+  &.btn-light {
+    background: #fff;
+    color: lighten($primary, 10%);
+    border-color: #fff;
+
+    &:hover {
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.17);
+      background: #fff;
+    }
+
+    &.btn-border {
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+        box-shadow: none;
+        background: #fff;
+        color: #222;
+      }
+    }
+  }
+
+  &.btn-primary {
+    background: $primary;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      border: none;
+      background: $primary;
+      box-shadow: 0 0 0 6px rgba($primary, 0.13);
+      color: #fff;
+    }
+
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  &.btn-secondary {
+    background: $secondary;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      border: none;
+      background: $secondary;
+      box-shadow: 0 0 0 6px rgba($secondary, 0.13);
+    }
+
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  &.btn-border {
+    background: none;
+    border: 1px solid;
+  }
+
+  &.btn-transparent {
+    background: none;
+    background-color: none;
+    color: #222;
+  }
+}

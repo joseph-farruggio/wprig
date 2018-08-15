@@ -1,0 +1,261 @@
+
+#page.navOpen {
+  overflow: hidden;
+  height: 100vh;
+
+  .site-header > .container {
+    width: 100%;
+  }
+}
+
+.site-branding {
+  padding: 0 1em 0 0;
+  margin: 1.2em 0;
+}
+
+.site-title, .site-description {
+  display: none;
+}
+
+.main-navigation {
+  font-family: 'Monteserrat', sans-serif;
+  margin: 1.2em 0;
+  padding: 0;
+
+  a, .dropdown-symbol {
+    color: var(--link-color);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.menu-toggle {
+  margin: 0;
+}
+
+.site-header {
+  padding-bottom: 0;
+  background: #fff;
+
+  .container {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    // align-items: center;
+  }
+}
+
+.custom-logo-link {
+  margin: 0;
+  width: 150px;
+
+  @media screen and (min-width: 400px) {
+    width: 200px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.menu-toggle {
+  padding: .6em .5em;
+  position: relative;
+  z-index: 101;
+}
+
+.main-navigation.navOpen {
+  overflow: hidden;
+  .menu {
+    display: flex;
+  }
+
+  .menu-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  a {
+    padding: .5em;
+    font-size: 1rem;
+    width: unset;
+    display: inline-block;
+    text-align: left;
+    & + span {
+      display: inline-block;
+      color: rgba($primary, .3);
+    }
+  }
+
+  .menu-back {
+    color: rgba($primary, .3);
+    padding: .5em;
+    font-size: 1rem;
+  }
+  
+  .primary-menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+
+    & > ul {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%);
+      transition: -webkit-transform 0.4s cubic-bezier(0.33, 0.005, 0.125, 1.005);
+      transition: transform 0.4s cubic-bezier(0.33, 0.005, 0.125, 1.005);
+    }
+
+    & > ul.subMenuOpen {
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+
+      li.subMenuOpen {
+        ul {
+          opacity: 1;
+          z-index: 9999;
+        }
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background: #fff;
+      font-size: 1.3rem;
+      line-height: 2.3;
+
+      ul {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        transition: opacity 0.2s cubic-bezier(0.33, 0.005, 0.125, 1.005);
+
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.transparent {
+  .site-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: none;
+  }
+
+  .menu-toggle {
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+@media (--large-query) {
+  .transparent {
+    .main-navigation {
+      a {
+        color: #fff;
+      }
+      .dropdown-symbol {
+        border-color: #fff;
+      }
+    }
+  }
+  .site-branding {
+    padding: 0 1em;
+    margin: 1.2em 0;
+  }
+
+  .main-navigation {
+    .menu {
+      display: flex;
+    }
+
+    ul.menu li a {
+      font-weight: 600;
+      font-size: .8rem !important;
+    }
+  }
+  
+  #primary-menu > li {
+    position: relative;
+
+    span {
+      display: none;
+    }
+
+    ul.sub-menu {
+      display: block;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      top: 90px;
+      right: 0;
+      background: #222;
+      border-radius: 3px;
+      z-index: 999;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      width: max-content;
+      transition: .4s;
+
+      a {
+        color: #fff;
+        font-size: .9rem;
+      }
+
+      li:hover {
+        background: #333;
+      }
+    }
+
+    &:hover {
+      ul.sub-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        top: 40px;
+        transition: .4s;
+      }
+    }
+
+    .close-sub-menu {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.alert {
+  padding: 20px 15px;
+
+  &.success {
+    border: 2px solid hsl(255, 40%, 50%);
+    background: hsl(255, 55%, 50%);
+    color: hsl(255, 90%, 90%);
+  }
+}

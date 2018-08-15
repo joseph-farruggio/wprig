@@ -1,0 +1,29 @@
+.entry-content {
+
+  h2 + .wp-block-swrdlyts-tile {
+    margin-top: 45px;
+  }
+  
+  .wp-block-swrdlyts-tile {
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    &>div.imageBox {
+      background-size: contain;
+      background-color: transparent;
+      min-height: 45vh;
+      width: 50%;
+    }
+
+    &>div.textBox {
+      margin: 0;
+
+      .textBoxContent {
+        width: 90%;
+        max-width: 100%;
+      }
+    }
+  }
+}

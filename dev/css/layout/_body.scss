@@ -1,0 +1,53 @@
+.site-main, .container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 100%;
+  position: relative;
+}
+
+
+
+@media (--small-query) {
+  .site-main, .container {
+    width: 540px;  
+  }
+}
+
+@media (--medium-query) {
+  .site-main, .container {
+    width: 720px;
+  }
+}
+
+@media (--large-query) { 
+  .site-main, .container {
+    width: 1140px;
+  }
+
+  .container.narrow {
+    width: 600px;
+  }
+}
+
+.site-main {
+  // padding: 2rem 1.5rem;
+}
+
+@media (--medium-query) {
+  .site-main {
+    // padding: 5rem initial;
+  }
+
+  &.padding-sm {
+    padding: 2rem initial;
+  }
+}
+
+.page .site-main {  
+  @media (--large-query) { 
+    // width: 720px;
+  }
+}
