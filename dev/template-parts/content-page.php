@@ -21,7 +21,7 @@ $featuredIMG = get_the_post_thumbnail_url();
 			</h1>
 			<?php the_excerpt(); ?> <br>
 			<div class="text-center">
-				<button @click="modalShow = !modalShow; subject = '<?php echo 'Interested in ' . get_the_title(); ?>'"  class="btn btn-light wrapper modal-launch">
+				<button @click="modalShow = !modalShow; form.subject = '<?php echo 'Interested in ' . get_the_title(); ?>'"  class="btn btn-light wrapper modal-launch">
 					Get Started <span class="hide-on-mobile">with <?php echo get_the_title(); ?></span>
 				</button>
 			</div>

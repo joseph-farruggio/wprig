@@ -1,5 +1,6 @@
+const ajaxURL = WPURLS.ajax_url;
 const templateDirectory = WPURLS.templateDirectory;
-const site_url = WPURLS.site_url;
+const siteURL = WPURLS.site_url;
 
 Vue.component('menu-item', {
   props: [
@@ -35,21 +36,26 @@ new Vue({
   el: '#page',
   data() {
     return {
-      site_url: site_url,
+      ajaxURL: ajaxURL,
+      siteURL: siteURL,
       templateDirectory: templateDirectory,
-      formLoader: false,
-      formSent: false,
-      name: '',
-      email: '',
-      website: '',
-      subject: '',
-      message: '',
-      response: '',
-      errors: '',
       navOpen: false,
       subMenuOpen: false,
       modalShow: false,
       navItems: [],
+      form: {
+        id: '',
+        action: '',
+        formLoader: false,
+        formSent: false,
+        name: '',
+        email: '',
+        website: '',
+        subject: '',
+        message: '',
+        response: '',
+        errors: '',
+      }
     }
   },
   computed: {
@@ -57,32 +63,35 @@ new Vue({
   created() {
 		axios.get('https://api.myjson.com/bins/7sgjw')
     .then(response => {
-			this.navItems = response.data;
-			for (let i = 0; i < this.navItems.length; i++) {
-        this.$set(this.navItems[i], 'active', false)
-		  }
+      this.navItems = response.data
+      for (let i = 0; i < this.navItems.length; i++) {
+        // this.navItems[i]['active'] = false
+        this.$set(this.navItems[i], 'active', true)
+      }		
+      // this.navItems = response.data.map(item => {
+			// 	return { 
+			// 	  ...item, 
+			// 		active: false 
+			// 	}
+			// })
 		})
-
 	},
   methods: {
     submitForm:function () {
       this.formLoader = true
       var data = {
-        action: this.action,
-        name: this.name,
-        email: this.email,
-        website: this.website,
-        subject: this.subject,
-        message: this.message
+        name: this.form.name,
+        email: this.form.email,
+        website: this.form.website,
+        subject: this.form.subject,
+        message: this.form.message
       }
-      axios.post(this.templateDirectory+'/inc/form-handler.php', Qs.stringify( data ))
+      axios.post(this.templateDirectory+'/inc/mail/mail_handler.php', Qs.stringify( data ))
       .then(response => {
-        this.formLoader = false
-        this.formSent = true
+        this.form.formLoader = false
+        this.form.formSent = true
         this.response = JSON.stringify(response, null, 2)
-        console.log('form response')
       })
-      console.log('form submitted')
     }
   }
 })

@@ -27,7 +27,7 @@ get_header(); ?>
         <?php the_field('hero_body'); ?>
                 </p>
                 <div>
-                    <button @click="modalShow = !modalShow; subject = '<?php echo 'Interested in ' . get_the_title(); ?>'" class="btn btn-light wrapper modal-launch">
+                    <button @click="modalShow = !modalShow; form.subject = '<?php echo 'Interested in ' . get_the_title(); ?>'" class="btn btn-light wrapper modal-launch">
         <?php echo $cta_text; ?>
                         <i class="fa fa-long-arrow-right"></i>
                     </button>
@@ -94,7 +94,7 @@ get_header(); ?>
             <?php the_field('hero_body_2'); ?>
         </p>
         <div>
-            <button @click="modalShow = !modalShow; subject = '<?php echo 'Interested in ' . get_the_title(); ?>'" class="btn btn-light wrapper modal-launch">
+            <button @click="modalShow = !modalShow; form.subject = '<?php echo 'Interested in ' . get_the_title(); ?>'" class="btn btn-light wrapper modal-launch">
                 <?php echo $cta_text; ?>
                 <i class="fa fa-long-arrow-right"></i>
             </button>

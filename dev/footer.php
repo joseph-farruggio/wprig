@@ -80,7 +80,7 @@
 	<?php wp_footer(); ?>
 
 			<!-- Start of Woopra Code -->
-			<!-- <script>
+			<script>
 				(function () {
 					var t, i, e, n = window,
 						o = document,
@@ -105,11 +105,11 @@
 				});
 				woopra.track();
 
-		</script> -->
+		</script>
 		<!-- End of Woopra Code -->
 
 		<!-- Hotjar Tracking Code for www.bizrocket.net -->
-		<!-- <script>
+		<script>
 			(function (h, o, t, j, a, r) {
 				h.hj = h.hj || function () {
 					(h.hj.q = h.hj.q || []).push(arguments)
@@ -125,7 +125,7 @@
 				a.appendChild(r);
 			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 
-		</script> -->
+		</script>
 		<!-- End of Hotjar Code -->
 	</body>
 

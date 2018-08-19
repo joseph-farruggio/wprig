@@ -310,7 +310,7 @@ function wprig_styles()
 
     // Enqueue main stylesheet.
     wp_enqueue_style('biz_rocket-base-style', get_stylesheet_uri(), array(), '20180514');
-    wp_enqueue_style('biz_rocket-theme-style', get_theme_file_uri('/css/theme.css'), array(), '20180810');
+    wp_enqueue_style('biz_rocket-theme-style', get_theme_file_uri('/css/theme.css'), array(), '20180815');
 
     // Register component styles that are printed as needed.
     //wp_register_style('biz_rocket-comments', get_theme_file_uri('/css/comments.css'), array(), '20180514');
@@ -346,17 +346,14 @@ function wprig_scripts()
     //     )
     // );
 
-    
-    
-
     // wp_enqueue_script('vendor-micromodal', 'https://unpkg.com/micromodal/dist/micromodal.min.js', array(), '20180716', false);
     // wp_script_add_data('vendor-micromodal', 'defer', true);
 
     // wp_enqueue_script('bizrocket-modal', get_theme_file_uri('/js/modals.js'), array(), '20180809', false);
     // wp_script_add_data('bizrocket-modal', 'async', true);
 
-    // wp_enqueue_script('bizrocket-woopra-indentify', get_theme_file_uri('/js/woopra-indentify.js'), array(), '20180809', false);
-    // wp_script_add_data('bizrocket-woopra-indentify', 'async', true);
+    wp_enqueue_script('bizrocket-woopra-indentify', get_theme_file_uri('/js/woopra-indentify.js'), array(), '20180809', false);
+    wp_script_add_data('bizrocket-woopra-indentify', 'async', true);
 
     // Enqueue skip-link-focus script.
     // wp_enqueue_script('biz_rocket-skip-link-focus-fix', get_theme_file_uri('/js/skip-link-focus-fix.js'), array(), '20180809', false);
@@ -372,12 +369,14 @@ function wprig_scripts()
     //wp_enqueue_script('bizrocket-vue-instance', 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js', array(), '2.5.3', true);
     // wp_script_add_data('bizrocket-vue-instance', 'async', true);
 
-    wp_enqueue_script('bizrocket-js', get_theme_file_uri('/js/main.js'), array(), '20180812', true);
+    wp_enqueue_script('bizrocket-js', get_theme_file_uri('/js/main.js'), array(), '20180815', true);
     // wp_script_add_data('bizrocket-js', 'async', true);
 
     wp_localize_script( 'bizrocket-js', 'WPURLS', array( 
+        'ajax_url' => admin_url('admin-ajax.php'),
         'site_url' => get_site_url(),
-        'templateDirectory' => get_template_directory_uri()
+        'templateDirectory' => get_template_directory_uri(),
+        'ajax_nonce' =>  wp_create_nonce( 'secure_nonce_name' )
     ));
     
 
@@ -510,3 +509,6 @@ add_action( 'rest_api_init', function () {
         'callback' => 'get_menu',
     ) );
 } );
+
+// Adding excerpt for page
+add_post_type_support( 'page', 'excerpt' );

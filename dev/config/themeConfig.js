@@ -8,7 +8,7 @@ module.exports = {
 	},
 	dev: {
 		browserSync: {
-			live: true,
+			live: false,
 			proxyURL: 'biz-rocket.local',
 			bypassPort: '8181'
 		},

@@ -56,7 +56,7 @@ get_header(); ?>
         ?>
 			<?php 
         if($i == 2 || $i == 5 || $i == 8) { ?>
-			<li class="cta" @click="modalShow = !modalShow; subject= 'Help me boost my business' ">
+			<li class="cta" @click="modalShow = !modalShow; form.subject= 'Help me boost my business' ">
 				<div>
 					<h3>Want to Boost Your Business?</h3>
 					<p>Let us design a customized marketing program for you.</p>
